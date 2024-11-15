@@ -304,10 +304,9 @@ static void main()
     randomize_list_fisher_yates(list_fy);
     */
 
-    //HashSet<String> decks = new HashSet<string>();
     //HashSet<BigInteger> decks_int = new HashSet<BigInteger>();
     HashSet<byte[]> decks_bytes = new HashSet<byte[]>();
-    ConcurrentDictionary<byte[], bool> decks_byte_dict = new ConcurrentDictionary<byte[], bool>();
+    HashSet<string> decks_strd = new HashSet<string>();
     bool looping = true;
     ReaderWriterLockSlim mex = new ReaderWriterLockSlim();
 
@@ -423,6 +422,7 @@ static void main()
             }
         }
 
+    /*
     void deck_check_thread_barr_dict(bool looping, int thread_id)
     {
 
@@ -458,6 +458,7 @@ static void main()
 
         }
     }
+    */
 
     int max_threads = Environment.ProcessorCount;
     List<Thread> threads = new List<Thread>();
